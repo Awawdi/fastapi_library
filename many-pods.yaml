@@ -17,3 +17,4 @@ spec:
       containers:
       - name: library-app
         image: ovieux/library
+        imagePullPolicy: Never
