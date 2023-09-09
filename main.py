@@ -31,7 +31,7 @@ async def read_all_authors():
 
 def load_file(selected_file : str = LIBRARY_JSON_FILE):
      with open(selected_file, "r") as dummy_file:
-        temp = json.dumps(dummy_file)
+        return json.load(dummy_file)["books"]
         
      
     
