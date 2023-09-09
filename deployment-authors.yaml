@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: library-deployment-2
+  labels:
+    app: library-app-authors
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: library-app-authors
+  template:
+    metadata:
+      labels:
+        app: library-app-authors
+    spec:
+      containers:
+      - name: library-app-authors
+        image: orsanaw/library-demo-authors:1.0
