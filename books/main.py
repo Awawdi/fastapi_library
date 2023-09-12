@@ -3,9 +3,7 @@ from fastapi import FastAPI
 from pathlib import Path
 import os
 
-REPO_ABSPATH = Path(os.path.abspath(__file__)).parent.parent
-
-LIBRARY_JSON_FILE = REPO_ABSPATH / "library.json"
+LIBRARY_JSON_FILE = "library.json"
 
 app = FastAPI()
 
