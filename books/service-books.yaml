@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: clusterip-service-authors
+spec:
+  type: ClusterIP
+  selector:
+    app: library-app-books
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000

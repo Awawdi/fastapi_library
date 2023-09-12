@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
       - name: library-app-authors
-        image: orsanaw/library-app-authors:1.3
+        image: orsanaw/library-app-authors:1.4
