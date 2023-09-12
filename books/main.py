@@ -1,5 +1,5 @@
 import json
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 
 
 LIBRARY_JSON_FILE = "library.json"
@@ -11,10 +11,10 @@ async def root():
     return load_file()
 
 @app.get("/books")
-async def read_all_books(request:Request):
+async def read_all_books():
     all_books_list = load_file()
     result = [d.get("title",None) for d in all_books_list]
-    return f"Listing all books. Request coming from {request.url._url}, response: {set(result)}"
+    return set(result)
 
 @app.get("/books/{item_id}")
 async def read_item(item_id):

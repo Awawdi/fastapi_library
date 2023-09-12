@@ -1,5 +1,5 @@
 import json
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 
 
 LIBRARY_JSON_FILE = "library.json"

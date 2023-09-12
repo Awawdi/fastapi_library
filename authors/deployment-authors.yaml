@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: library-deployment-2
+  name: library-deployment-authors
   labels:
     app: library-app-authors
 spec:
@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
       - name: library-app-authors
-        image: orsanaw/library-demo-authors:1.0
+        image: orsanaw/library-app-authors:1.3
