@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
       - name: library-app-books
-        image: orsanaw/library-app-books:1.4
+        image: orsanaw/library-app-books:1.5
