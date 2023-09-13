@@ -1,12 +1,19 @@
-apiVersion: v1
-kind: Service
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: clusterip-service-authors
+  name: library-deployment-books
 spec:
-  type: ClusterIP
+  replicas: 2
   selector:
-    app: library-app-books
-  ports:
-    - protocol: TCP
-      port: 5000
-      targetPort: 5000
+    matchLabels:
+      app: books-pod
+  template:
+    metadata:
+      labels:
+        app: books-pod
+    spec:
+      containers:
+      - name: books
+        image: orsanaw/library-app-authors:1.6
+        ports:
+        - containerPort: 80

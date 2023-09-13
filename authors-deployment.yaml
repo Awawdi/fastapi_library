@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: library-deployment-authors
-  labels:
-    app: library-app-authors
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: library-app-authors
+      app: authors-pod
   template:
     metadata:
       labels:
-        app: library-app-authors
+        app: authors-pod
     spec:
       containers:
-      - name: library-app-authors
-        image: orsanaw/library-app-authors:1.5
+      - name: authors
+        image: orsanaw/library-app-authors:1.6
+        ports:
+        - containerPort: 8000
