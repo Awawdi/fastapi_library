@@ -1,7 +1,5 @@
 import json
 from fastapi import FastAPI
-from pathlib import Path
-import os
 
 LIBRARY_JSON_FILE = "library.json"
 
